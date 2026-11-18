@@ -1,85 +1,116 @@
 
 /* =====================================================
-   FOODWISE AI — KNOWLEDGE-BASED RECOMMENDATION SYSTEM
-   Expanded sample restaurant knowledge base
+   FOODWISE AI
+   Knowledge-Based Restaurant Recommendation System
 ===================================================== */
 
-// 1. RESTAURANT KNOWLEDGE BASE
-const restaurants = [
+/* 1. RESTAURANT KNOWLEDGE BASE */
+
+const restaurantKnowledgeBase = [
     {
-        id: 1, name: "Green Bowl Kitchen", cuisine: ["Healthy", "South Indian"],
-        location: "Perundurai Road", price: 180, distance: 1.2,
-        rating: 4.7, dietary: ["Vegetarian", "Vegan", "Gluten-free"],
-        meals: ["Breakfast", "Lunch"], emoji: "🥗", theme: "green"
+        id: 1,
+        name: "Green Bowl Kitchen",
+        cuisine: ["Healthy", "South Indian"],
+        location: "Perundurai Road",
+        price: 180,
+        distance: 1.2,
+        rating: 4.7,
+        dietary: ["Vegetarian", "Vegan", "Gluten-free"],
+        meals: ["Breakfast", "Lunch"],
+        emoji: "🥗",
+        theme: "green"
     },
     {
-        id: 2, name: "Annapoorna Veg House", cuisine: ["South Indian"],
-        location: "Thindal", price: 140, distance: 2.1,
-        rating: 4.5, dietary: ["Vegetarian", "Jain"],
-        meals: ["Breakfast", "Lunch", "Dinner"], emoji: "🍛", theme: "peach"
+        id: 2,
+        name: "Annapoorna Veg House",
+        cuisine: ["South Indian"],
+        location: "Thindal",
+        price: 140,
+        distance: 2.1,
+        rating: 4.5,
+        dietary: ["Vegetarian", "Jain"],
+        meals: ["Breakfast", "Lunch", "Dinner"],
+        emoji: "🍛",
+        theme: "peach"
     },
     {
-        id: 3, name: "Wok & Roll", cuisine: ["Chinese"],
-        location: "Brough Road", price: 230, distance: 3.4,
-        rating: 4.4, dietary: ["Vegetarian"],
-        meals: ["Lunch", "Dinner"], emoji: "🍜", theme: "lavender"
+        id: 3,
+        name: "Wok & Roll",
+        cuisine: ["Chinese"],
+        location: "Brough Road",
+        price: 230,
+        distance: 3.4,
+        rating: 4.4,
+        dietary: ["Vegetarian"],
+        meals: ["Lunch", "Dinner"],
+        emoji: "🍜",
+        theme: "lavender"
     },
     {
-        id: 4, name: "Olive & Oregano", cuisine: ["Italian", "Continental"],
-        location: "Teachers Colony", price: 380, distance: 4.1,
-        rating: 4.6, dietary: ["Vegetarian"],
-        meals: ["Lunch", "Dinner"], emoji: "🍕", theme: "peach"
+        id: 4,
+        name: "Olive & Oregano",
+        cuisine: ["Italian", "Continental"],
+        location: "Teachers Colony",
+        price: 380,
+        distance: 4.1,
+        rating: 4.6,
+        dietary: ["Vegetarian"],
+        meals: ["Lunch", "Dinner"],
+        emoji: "🍕",
+        theme: "peach"
     },
     {
-        id: 5, name: "Saffron Table", cuisine: ["North Indian"],
-        location: "Moolapalayam", price: 260, distance: 2.7,
-        rating: 4.3, dietary: ["Vegetarian", "Jain"],
-        meals: ["Lunch", "Dinner"], emoji: "🥘", theme: "green"
+        id: 5,
+        name: "Saffron Table",
+        cuisine: ["North Indian"],
+        location: "Moolapalayam",
+        price: 260,
+        distance: 2.7,
+        rating: 4.3,
+        dietary: ["Vegetarian", "Jain"],
+        meals: ["Lunch", "Dinner"],
+        emoji: "🥘",
+        theme: "green"
     },
     {
-        id: 6, name: "Dosa Stories", cuisine: ["South Indian"],
-        location: "Thindal", price: 110, distance: 1.6,
-        rating: 4.6, dietary: ["Vegetarian", "Vegan", "Jain"],
-        meals: ["Breakfast", "Snacks", "Dinner"], emoji: "🥞", theme: "lavender"
-    },
-    {
-        id: 7, name: "Spice Route", cuisine: ["North Indian"],
-        location: "Perundurai Road", price: 290, distance: 2.4,
-        rating: 4.5, dietary: ["Vegetarian"],
-        meals: ["Lunch", "Dinner"], emoji: "🍲", theme: "peach"
-    },
-    {
-        id: 8, name: "Tokyo Bento", cuisine: ["Japanese"],
-        location: "Brough Road", price: 420, distance: 4.8,
-        rating: 4.8, dietary: ["Vegetarian", "Gluten-free"],
-        meals: ["Lunch", "Dinner"], emoji: "🍱", theme: "lavender"
-    },
-    {
-        id: 9, name: "Mexican Fiesta", cuisine: ["Mexican"],
-        location: "Teachers Colony", price: 320, distance: 3.8,
-        rating: 4.4, dietary: ["Vegetarian", "Vegan"],
-        meals: ["Lunch", "Dinner"], emoji: "🌮", theme: "peach"
-    },
-    {
-        id: 10, name: "Arabian Nights", cuisine: ["Arabic"],
-        location: "Moolapalayam", price: 350, distance: 3.1,
-        rating: 4.6, dietary: ["Vegetarian"],
-        meals: ["Lunch", "Dinner"], emoji: "🥙", theme: "green"
+        id: 6,
+        name: "Dosa Stories",
+        cuisine: ["South Indian"],
+        location: "Thindal",
+        price: 110,
+        distance: 1.6,
+        rating: 4.6,
+        dietary: ["Vegetarian", "Vegan", "Jain"],
+        meals: ["Breakfast", "Snacks", "Dinner"],
+        emoji: "🥞",
+        theme: "lavender"
     }
 ];
 
-// Generate additional sample restaurants from curated combinations.
-const restaurantTemplates = [
-    { cuisine: "South Indian", emoji: "🍛", base: 130, dietary: ["Vegetarian", "Vegan", "Jain"] },
-    { cuisine: "North Indian", emoji: "🥘", base: 240, dietary: ["Vegetarian", "Jain"] },
-    { cuisine: "Chinese", emoji: "🍜", base: 220, dietary: ["Vegetarian", "Vegan"] },
-    { cuisine: "Italian", emoji: "🍕", base: 350, dietary: ["Vegetarian"] },
-    { cuisine: "Mexican", emoji: "🌮", base: 300, dietary: ["Vegetarian", "Vegan"] },
-    { cuisine: "Japanese", emoji: "🍱", base: 400, dietary: ["Vegetarian", "Gluten-free"] },
-    { cuisine: "Arabic", emoji: "🥙", base: 320, dietary: ["Vegetarian"] },
-    { cuisine: "Continental", emoji: "🍝", base: 340, dietary: ["Vegetarian"] },
-    { cuisine: "Healthy", emoji: "🥗", base: 180, dietary: ["Vegetarian", "Vegan", "Gluten-free"] },
-    { cuisine: "Fast Food", emoji: "🍔", base: 160, dietary: ["Vegetarian"] }
+/* 2. ADDITIONAL RESTAURANT TEMPLATES */
+
+const additionalRestaurantTemplates = [
+    { cuisine: "South Indian", price: 130, emoji: "🍛", dietary: ["Vegetarian", "Vegan", "Jain"] },
+    { cuisine: "North Indian", price: 230, emoji: "🥘", dietary: ["Vegetarian", "Jain"] },
+    { cuisine: "Chinese", price: 210, emoji: "🍜", dietary: ["Vegetarian", "Vegan"] },
+    { cuisine: "Italian", price: 330, emoji: "🍕", dietary: ["Vegetarian"] },
+    { cuisine: "Mexican", price: 280, emoji: "🌮", dietary: ["Vegetarian", "Vegan"] },
+    { cuisine: "Japanese", price: 390, emoji: "🍱", dietary: ["Vegetarian", "Gluten-free"] },
+    { cuisine: "Arabic", price: 310, emoji: "🥙", dietary: ["Vegetarian"] },
+    { cuisine: "Continental", price: 320, emoji: "🍝", dietary: ["Vegetarian"] },
+    { cuisine: "Healthy", price: 180, emoji: "🥗", dietary: ["Vegetarian", "Vegan", "Gluten-free"] },
+    { cuisine: "Fast Food", price: 160, emoji: "🍔", dietary: ["Vegetarian"] }
+];
+
+const additionalRestaurantNames = [
+    "Royal", "Urban", "Fresh", "Golden", "Spice",
+    "Classic", "Garden", "Fusion", "Grand", "Little",
+    "Tasty", "Green", "Street", "Daily", "Family"
+];
+
+const additionalRestaurantSuffixes = [
+    "Kitchen", "Bites", "Corner", "House", "Cafe",
+    "Delights", "Express", "Table", "Hub", "Treats"
 ];
 
 const restaurantAreas = [
@@ -91,103 +122,141 @@ const restaurantAreas = [
     "Gandhiji Road",
     "Surampatti",
     "Villarasampatti",
-    "Erode Bus Stand",
-    "Veerappanchatram"
+    "Erode Bus Stand"
 ];
 
-const restaurantPrefixes = [
-    "Royal", "Urban", "Classic", "Fresh", "Golden",
-    "Spice", "Little", "Grand", "Daily", "Family",
-    "Fusion", "Taste", "Garden", "Urban Spoon", "Foodie"
-];
+/* Generate 45 additional sample restaurants */
 
-const restaurantSuffixes = [
-    "Kitchen", "Bites", "Corner", "House", "Hub",
-    "Delights", "Cafe", "Express", "Treats", "Table"
-];
+for (let index = 0; index < 45; index++) {
+    const template =
+        additionalRestaurantTemplates[
+            index % additionalRestaurantTemplates.length
+        ];
 
-for (let i = 0; i < 45; i++) {
-    const template = restaurantTemplates[i % restaurantTemplates.length];
-    const area = restaurantAreas[i % restaurantAreas.length];
-    const prefix = restaurantPrefixes[i % restaurantPrefixes.length];
-    const suffix = restaurantSuffixes[i % restaurantSuffixes.length];
+    const prefix =
+        additionalRestaurantNames[
+            index % additionalRestaurantNames.length
+        ];
 
-    restaurants.push({
-        id: i + 11,
+    const suffix =
+        additionalRestaurantSuffixes[
+            index % additionalRestaurantSuffixes.length
+        ];
+
+    const area =
+        restaurantAreas[index % restaurantAreas.length];
+
+    restaurantKnowledgeBase.push({
+        id: index + 7,
         name: `${prefix} ${template.cuisine} ${suffix}`,
         cuisine: [template.cuisine],
         location: area,
-        price: template.base + ((i % 5) * 20),
-        distance: Number((0.8 + ((i * 7) % 45) / 10).toFixed(1)),
-        rating: Number((4.0 + ((i * 3) % 10) / 10).toFixed(1)),
-        dietary: template.dietary,
-        meals: ["Breakfast", "Lunch", "Dinner"],
+        price: template.price + ((index % 4) * 20),
+        distance: Number(
+            (0.8 + ((index * 7) % 45) / 10).toFixed(1)
+        ),
+        rating: Number(
+            (4.0 + ((index * 3) % 10) / 10).toFixed(1)
+        ),
+        dietary: [...template.dietary],
+        meals: ["Breakfast", "Lunch", "Dinner", "Snacks"],
         emoji: template.emoji,
-        theme: ["green", "peach", "lavender"][i % 3]
+        theme: ["green", "peach", "lavender"][index % 3]
     });
 }
 
-// Total: 55 sample restaurant records.
-// These are synthetic demo records, not verified real businesses.
+console.log(
+    `FoodWise AI loaded ${restaurantKnowledgeBase.length} sample restaurants.`
+);
 
+/* 3. CUSTOMER KNOWLEDGE */
 
-// 2. CUSTOMER KNOWLEDGE
-const customerKnowledge = {
+let customerKnowledge = {
     location: "Erode",
-    cuisine: "South Indian",
-    dietary: ["Vegetarian"],
+    preferredCuisine: "South Indian",
+    dietaryRequirements: ["Vegetarian"],
     budget: 250,
     meal: "Any",
     priority: "taste"
 };
 
-let selectedCuisine = "South Indian";
+/* 4. PREFERENCE LEARNING */
 
+let learnedPreferences = {};
 
-// 3. KNOWLEDGE REPRESENTATION
-function representKnowledge() {
+try {
+    learnedPreferences = JSON.parse(
+        localStorage.getItem("foodwisePreferences") || "{}"
+    ) || {};
+} catch (error) {
+    console.warn("Could not read saved preferences.", error);
+    learnedPreferences = {};
+}
+
+function saveLearnedPreferences() {
+    localStorage.setItem(
+        "foodwisePreferences",
+        JSON.stringify(learnedPreferences)
+    );
+}
+
+function getPreferenceWeight(restaurantId) {
+    return learnedPreferences[restaurantId] || 0;
+}
+
+/* 5. KNOWLEDGE REPRESENTATION */
+
+function representKnowledge(customer, restaurant) {
     return {
-        customer: {
-            preferredCuisine: customerKnowledge.cuisine,
-            location: customerKnowledge.location,
-            dietaryRequirements: customerKnowledge.dietary,
-            maximumBudget: Number(customerKnowledge.budget),
-            preferredMeal: customerKnowledge.meal,
-            priority: customerKnowledge.priority
-        },
-        restaurantFacts: restaurants.length
+        customerLocation: customer.location,
+        preferredCuisine: customer.preferredCuisine,
+        restaurantCuisine: restaurant.cuisine,
+        requiredDiet: customer.dietaryRequirements,
+        availableDiet: restaurant.dietary,
+        customerBudget: customer.budget,
+        restaurantPrice: restaurant.price,
+        customerMeal: customer.meal,
+        availableMeals: restaurant.meals,
+        distance: restaurant.distance,
+        rating: restaurant.rating
     };
 }
 
+/* =====================================================
+   PART 2 — KNOWLEDGE RULES & INFERENCE ENGINE
+===================================================== */
 
-// 4. KNOWLEDGE RULES
+/* 6. PRODUCTION RULES (IF–THEN) */
+
 const knowledgeRules = [
     {
         id: "R1",
-        name: "Dietary Compatibility",
-        description: "Restaurant must satisfy the customer's dietary requirements.",
+        name: "Cuisine Compatibility",
+        description: "Restaurant cuisine must match customer preference.",
         evaluate: (restaurant, customer) =>
-            customer.dietary.every(item => restaurant.dietary.includes(item))
+            customer.preferredCuisine === "Any" ||
+            restaurant.cuisine.includes(customer.preferredCuisine)
     },
     {
         id: "R2",
-        name: "Cuisine Matching",
-        description: "Restaurant must match the selected cuisine.",
+        name: "Dietary Compatibility",
+        description: "Restaurant must satisfy dietary requirements.",
         evaluate: (restaurant, customer) =>
-            customer.cuisine === "Any" ||
-            restaurant.cuisine.includes(customer.cuisine)
+            customer.dietaryRequirements.every(requirement =>
+                restaurant.dietary.includes(requirement)
+            )
     },
     {
         id: "R3",
         name: "Budget Compatibility",
-        description: "Restaurant price must be within the customer's budget.",
+        description: "Restaurant must be within the customer's budget.",
         evaluate: (restaurant, customer) =>
             customer.budget === "Any" ||
             restaurant.price <= Number(customer.budget)
     },
     {
         id: "R4",
-        name: "Meal-Time Compatibility",
+        name: "Meal Compatibility",
         description: "Restaurant must support the selected meal.",
         evaluate: (restaurant, customer) =>
             customer.meal === "Any" ||
@@ -196,277 +265,209 @@ const knowledgeRules = [
 ];
 
 
-// 5. INFERENCE ENGINE
-function runInferenceEngine() {
-    const customer = {
-        ...customerKnowledge,
-        cuisine: customerKnowledge.cuisine,
-        budget: customerKnowledge.budget
-    };
+/* 7. INFERENCE ENGINE */
 
-    return restaurants.map(restaurant => {
+function runInferenceEngine() {
+    const evaluatedRestaurants = restaurantKnowledgeBase.map(restaurant => {
+
+        const knowledge = representKnowledge(
+            customerKnowledge,
+            restaurant
+        );
+
         const firedRules = knowledgeRules
-            .filter(rule => rule.evaluate(restaurant, customer))
-            .map(rule => rule.id);
+            .filter(rule =>
+                rule.evaluate(restaurant, customerKnowledge)
+            )
+            .map(rule => ({
+                id: rule.id,
+                name: rule.name,
+                description: rule.description
+            }));
+
+        const failedRules = knowledgeRules
+            .filter(rule =>
+                !rule.evaluate(restaurant, customerKnowledge)
+            )
+            .map(rule => rule.name);
 
         return {
             ...restaurant,
+            knowledge,
             firedRules,
-            eligible: firedRules.length === knowledgeRules.length
+            failedRules,
+            eligible: failedRules.length === 0
         };
-    }).filter(restaurant => restaurant.eligible);
+    });
+
+    return evaluatedRestaurants.filter(
+        restaurant => restaurant.eligible
+    );
 }
 
 
-// 6. PREFERENCE SCORING
+/* 8. HEURISTIC RECOMMENDATION SCORING */
+
 function calculateRecommendationScore(restaurant) {
-    const budget = customerKnowledge.budget === "Any"
-        ? 500
-        : Number(customerKnowledge.budget);
 
     const tasteScore = restaurant.rating / 5;
-    const distanceScore = Math.max(0, 1 - restaurant.distance / 10);
-    const budgetScore = Math.max(0, 1 - restaurant.price / (budget * 1.5));
 
-    let score;
-
-    if (customerKnowledge.priority === "distance") {
-        score = distanceScore * 0.6 + tasteScore * 0.25 + budgetScore * 0.15;
-    } else if (customerKnowledge.priority === "budget") {
-        score = budgetScore * 0.6 + tasteScore * 0.25 + distanceScore * 0.15;
-    } else {
-        score = tasteScore * 0.6 + distanceScore * 0.25 + budgetScore * 0.15;
-    }
-
-    return Math.round(score * 100);
-}
-
-
-// 7. EXPLANATION GENERATOR
-function generateExplanation(restaurant) {
-    const reasons = [];
-
-    if (
-        customerKnowledge.cuisine === "Any" ||
-        restaurant.cuisine.includes(customerKnowledge.cuisine)
-    ) {
-        reasons.push(`Matches your ${customerKnowledge.cuisine} cuisine preference`);
-    }
-
-    if (customerKnowledge.dietary.every(item => restaurant.dietary.includes(item))) {
-        reasons.push("Meets your dietary requirements");
-    }
-
-    if (
-        customerKnowledge.budget === "Any" ||
-        restaurant.price <= Number(customerKnowledge.budget)
-    ) {
-        reasons.push("Fits within your budget");
-    }
-
-    if (
-        customerKnowledge.meal === "Any" ||
-        restaurant.meals.includes(customerKnowledge.meal)
-    ) {
-        reasons.push("Available for your selected meal");
-    }
-
-    reasons.push(`Sample listed distance: ${restaurant.distance} km`);
-
-    return reasons;
-}
-
-
-// 8. DISPLAY RECOMMENDATIONS
-function displayRecommendations(recommendations) {
-    const resultsGrid = document.getElementById("resultsGrid");
-    const resultCount = document.getElementById("resultCount");
-    const resultHeading = document.getElementById("resultHeading");
-
-    if (!resultsGrid) return;
-
-    if (resultCount) {
-        resultCount.textContent = recommendations.length;
-    }
-
-    if (resultHeading) {
-        resultHeading.textContent =
-            `Recommendations for ${customerKnowledge.location}`;
-    }
-
-    if (recommendations.length === 0) {
-        resultsGrid.innerHTML = `
-            <div class="empty-state">
-                <div style="font-size:48px">🔍</div>
-                <h3>No matching restaurants found</h3>
-                <p>Try changing your cuisine, budget or dietary preferences.</p>
-            </div>
-        `;
-        return;
-    }
-
-    resultsGrid.innerHTML = recommendations.map(restaurant => {
-        const reasons = generateExplanation(restaurant);
-
-        return `
-            <article class="restaurant-card">
-                <div class="food-visual ${restaurant.theme}">
-                    <span>${restaurant.emoji}</span>
-                    <div class="restaurant-score">
-                        ${restaurant.score}% Match
-                    </div>
-                </div>
-
-                <div class="restaurant-info">
-                    <div class="restaurant-heading">
-                        <h3>${restaurant.name}</h3>
-                        <span>⭐ ${restaurant.rating}</span>
-                    </div>
-
-                    <p>📍 ${restaurant.location}</p>
-
-                    <p>🍽️ ${restaurant.cuisine.join(" / ")}</p>
-
-                    <p>📏 ${restaurant.distance} km · ₹${restaurant.price}</p>
-
-                    <div class="restaurant-tags">
-                        ${restaurant.dietary.map(tag =>
-                            `<span>${tag}</span>`
-                        ).join("")}
-                    </div>
-
-                    <button class="why-button"
-                        onclick="toggleExplanation(${restaurant.id})">
-                        Why recommended?
-                    </button>
-
-                    <div class="explanation-panel"
-                        id="explanation-${restaurant.id}" hidden>
-                        <strong>Knowledge-based explanation</strong>
-                        <ul>
-                            ${reasons.map(reason =>
-                                `<li>${reason}</li>`
-                            ).join("")}
-                        </ul>
-                        <p>Rules fired: ${restaurant.firedRules.join(", ")}</p>
-                    </div>
-
-                    <button class="feedback-button"
-                        onclick="recordFeedback(${restaurant.id}, 'like')">
-                        👍 Like this recommendation
-                    </button>
-                </div>
-            </article>
-        `;
-    }).join("");
-}
-
-
-// 9. EXPLANATION TOGGLE
-function toggleExplanation(id) {
-    const panel = document.getElementById(`explanation-${id}`);
-
-    if (panel) {
-        panel.hidden = !panel.hidden;
-    }
-}
-
-
-// 10. FEEDBACK KNOWLEDGE
-function recordFeedback(id, feedback) {
-    const key = "foodwisePreferences";
-
-    const existing = JSON.parse(localStorage.getItem(key) || "{}");
-
-    existing[id] = (existing[id] || 0) + (feedback === "like" ? 1 : -1);
-
-    localStorage.setItem(key, JSON.stringify(existing));
-
-    showToast("Your preference feedback has been saved!");
-
-    updateRecommendations();
-}
-
-
-// 11. MAIN RECOMMENDATION PIPELINE
-function updateRecommendations() {
-    const candidates = runInferenceEngine();
-
-    const feedback = JSON.parse(
-        localStorage.getItem("foodwisePreferences") || "{}"
+    const distanceScore = Math.max(
+        0,
+        1 - restaurant.distance / 10
     );
 
-    const ranked = candidates.map(restaurant => ({
-        ...restaurant,
-        score: Math.max(
+    let budgetScore = 1;
+
+    if (customerKnowledge.budget !== "Any") {
+        const budget = Number(customerKnowledge.budget);
+
+        budgetScore = Math.max(
             0,
-            Math.min(
-                100,
-                calculateRecommendationScore(restaurant) +
-                Math.min(10, (feedback[restaurant.id] || 0) * 2)
-            )
+            1 - restaurant.price / (budget * 1.5)
+        );
+    }
+
+    let finalScore;
+
+    switch (customerKnowledge.priority) {
+
+        case "distance":
+            finalScore =
+                distanceScore * 0.60 +
+                tasteScore * 0.25 +
+                budgetScore * 0.15;
+            break;
+
+        case "budget":
+            finalScore =
+                budgetScore * 0.60 +
+                tasteScore * 0.25 +
+                distanceScore * 0.15;
+            break;
+
+        default:
+            finalScore =
+                tasteScore * 0.60 +
+                distanceScore * 0.25 +
+                budgetScore * 0.15;
+    }
+
+    // Feedback adjusts the ranking slightly.
+    const feedbackBonus = Math.max(
+        -10,
+        Math.min(10, getPreferenceWeight(restaurant.id) * 2)
+    );
+
+    return Math.max(
+        0,
+        Math.min(100, Math.round(finalScore * 100) + feedbackBonus)
+    );
+}
+
+
+/* 9. RECOMMENDATION EXPLANATION GENERATOR */
+
+function generateExplanation(restaurant) {
+
+    const explanations = [];
+
+    if (
+        customerKnowledge.preferredCuisine === "Any" ||
+        restaurant.cuisine.includes(
+            customerKnowledge.preferredCuisine
         )
+    ) {
+        explanations.push(
+            `Matches your ${customerKnowledge.preferredCuisine} cuisine preference.`
+        );
+    }
+
+    if (customerKnowledge.dietaryRequirements.length > 0) {
+        explanations.push(
+            `Meets your dietary requirements: ${
+                customerKnowledge.dietaryRequirements.join(", ")
+            }.`
+        );
+    }
+
+    if (customerKnowledge.budget === "Any") {
+        explanations.push(
+            "Matches your flexible budget preference."
+        );
+    } else {
+        explanations.push(
+            `Costs ₹${restaurant.price}, within your ₹${customerKnowledge.budget} budget.`
+        );
+    }
+
+    if (customerKnowledge.meal === "Any") {
+        explanations.push(
+            "Available meal options match your flexible meal preference."
+        );
+    } else {
+        explanations.push(
+            `Available for ${customerKnowledge.meal}.`
+        );
+    }
+
+    explanations.push(
+        `Sample listed distance: ${restaurant.distance} km.`
+    );
+
+    explanations.push(
+        `Customer rating: ${restaurant.rating}/5.`
+    );
+
+    return explanations;
+}
+
+
+/* 10. KNOWLEDGE RULE TRACE */
+
+function generateRuleTrace(restaurant) {
+
+    if (!restaurant.firedRules.length) {
+        return "No recommendation rules were satisfied.";
+    }
+
+    return restaurant.firedRules.map(rule =>
+        `${rule.id}: ${rule.name}`
+    ).join(" | ");
+}
+
+
+/* 11. MAIN RECOMMENDATION PIPELINE */
+
+function getRankedRecommendations() {
+
+    const eligibleRestaurants = runInferenceEngine();
+
+    const rankedRestaurants = eligibleRestaurants.map(restaurant => ({
+        ...restaurant,
+        score: calculateRecommendationScore(restaurant),
+        explanation: generateExplanation(restaurant),
+        ruleTrace: generateRuleTrace(restaurant)
     }));
 
-    ranked.sort((a, b) => b.score - a.score);
+    rankedRestaurants.sort((a, b) => b.score - a.score);
 
-    displayRecommendations(ranked);
-
-    console.log("Knowledge representation:", representKnowledge());
-    console.log("Eligible restaurants:", ranked.length);
-    console.log("Inference rules:", knowledgeRules);
+    return rankedRestaurants;
 }
 
+/* =====================================================
+   PART 3 — RESTAURANT DISPLAY & INTERACTIONS
+===================================================== */
 
-// 12. FORM INPUT HANDLING
-function setupForm() {
-    const form = document.getElementById("preferenceForm");
+/* 12. DOM ELEMENTS */
 
-    if (!form) return;
-
-    form.addEventListener("submit", event => {
-        event.preventDefault();
-
-        const location = document.getElementById("locationInput");
-        const budget = document.getElementById("budgetSelect");
-        const meal = document.getElementById("mealSelect");
-
-        customerKnowledge.location = location?.value.trim() || "Erode";
-        customerKnowledge.budget = budget?.value || "Any";
-        customerKnowledge.meal = meal?.value || "Any";
-
-        customerKnowledge.cuisine = selectedCuisine || "Any";
-
-        customerKnowledge.dietary = Array.from(
-            document.querySelectorAll('input[name="diet"]:checked')
-        ).map(input => input.value);
-
-        const priority = document.querySelector(
-            'input[name="priority"]:checked'
-        );
-
-        customerKnowledge.priority = priority?.value || "taste";
-
-        updateRecommendations();
-
-        showToast("Your recommendations have been updated!");
-    });
-
-    document.querySelectorAll("[data-cuisine]").forEach(button => {
-        button.addEventListener("click", () => {
-            document.querySelectorAll("[data-cuisine]").forEach(item =>
-                item.classList.remove("active")
-            );
-
-            button.classList.add("active");
-            selectedCuisine = button.dataset.cuisine;
-        });
-    });
-}
+const resultsGrid = document.getElementById("resultsGrid");
+const resultCount = document.getElementById("resultCount");
 
 
-// 13. TOAST MESSAGE
-function showToast(message) {
+/* 13. NOTIFICATION SYSTEM */
+
+function showNotification(message) {
     const toast = document.getElementById("toastMessage");
 
     if (!toast) return;
@@ -480,11 +481,365 @@ function showToast(message) {
 }
 
 
-// 14. INITIALIZATION
-document.addEventListener("DOMContentLoaded", () => {
-    setupForm();
-    updateRecommendations();
+/* 14. RESTAURANT CARD GENERATOR */
 
-    console.log("FoodWise AI initialized successfully!");
-    console.log("Total sample restaurants:", restaurants.length);
+function createRestaurantCard(restaurant) {
+
+    const dietaryTags = restaurant.dietary
+        .map(tag => `<span>${tag}</span>`)
+        .join("");
+
+    return `
+        <article class="restaurant-card">
+
+            <div class="food-visual ${restaurant.theme}">
+                ${restaurant.emoji}
+            </div>
+
+            <div class="restaurant-info">
+
+                <h4>${restaurant.name}</h4>
+
+                <p>
+                    ${restaurant.cuisine.join(" / ")}
+                    · ${restaurant.location}
+                    · ${restaurant.distance} km
+                </p>
+
+                <div class="restaurant-tags">
+                    <span>₹${restaurant.price}/person</span>
+                    <span>★ ${restaurant.rating}</span>
+                    ${dietaryTags}
+                </div>
+
+            </div>
+
+            <div class="restaurant-score">
+
+                <strong>${restaurant.score}%</strong>
+
+                <small>MATCH</small>
+
+                <button
+                    class="why-button"
+                    data-explanation="${restaurant.id}">
+                    Why this match? ↗
+                </button>
+
+            </div>
+
+            <div
+                class="explanation-panel"
+                id="explanation-${restaurant.id}"
+                hidden>
+
+                <strong>Knowledge-Based Explanation</strong>
+
+                <ul>
+                    ${restaurant.explanation.map(reason =>
+                        `<li>${reason}</li>`
+                    ).join("")}
+                </ul>
+
+                <p class="rule-trace">
+                    Rules fired: ${restaurant.ruleTrace}
+                </p>
+
+                <button
+                    class="feedback-button"
+                    data-feedback="${restaurant.id}">
+                    ♡ I like this recommendation
+                </button>
+
+            </div>
+
+        </article>
+    `;
+}
+
+
+/* 15. DISPLAY RECOMMENDATIONS */
+
+function displayRecommendations(recommendations) {
+
+    if (!resultsGrid) {
+        console.error("Results grid element not found.");
+        return;
+    }
+
+    if (resultCount) {
+        resultCount.textContent =
+            `${recommendations.length} MATCHES`;
+    }
+
+    if (recommendations.length === 0) {
+
+        resultsGrid.innerHTML = `
+            <div class="results-placeholder">
+
+                <div class="placeholder-icon">✧</div>
+
+                <h4>No matching restaurants found</h4>
+
+                <p>
+                    Try changing your cuisine, dietary
+                    requirements or increasing your budget.
+                </p>
+
+            </div>
+        `;
+
+        return;
+    }
+
+    resultsGrid.innerHTML = recommendations
+        .map(createRestaurantCard)
+        .join("");
+
+    attachRecommendationEvents();
+}
+
+
+/* 16. EXPLANATION AND FEEDBACK EVENTS */
+
+function attachRecommendationEvents() {
+
+    document.querySelectorAll("[data-explanation]")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const id = button.dataset.explanation;
+
+                const explanation = document.getElementById(
+                    `explanation-${id}`
+                );
+
+                if (!explanation) return;
+
+                explanation.hidden = !explanation.hidden;
+
+                button.textContent = explanation.hidden
+                    ? "Why this match? ↗"
+                    : "Hide explanation ↑";
+
+            });
+
+        });
+
+
+    document.querySelectorAll("[data-feedback]")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const id = button.dataset.feedback;
+
+                learnedPreferences[id] =
+                    (learnedPreferences[id] || 0) + 1;
+
+                saveLearnedPreferences();
+
+                showNotification(
+                    "Preference learned! Your recommendations are adapting."
+                );
+
+                refreshRecommendations();
+
+            });
+
+        });
+
+}
+
+
+/* 17. REFRESH RECOMMENDATIONS */
+
+function refreshRecommendations() {
+
+    const recommendations = getRankedRecommendations();
+
+    displayRecommendations(recommendations);
+
+    const heading = document.getElementById("resultHeading");
+
+    if (heading) {
+        heading.textContent =
+            `Recommendations for ${customerKnowledge.location}`;
+    }
+
+    return recommendations;
+}
+
+
+/* 18. KNOWLEDGE ENGINE STATUS */
+
+function displayKnowledgeStatistics() {
+
+    console.log("========== FOODWISE AI ==========");
+    console.log(
+        "Total restaurant records:",
+        restaurantKnowledgeBase.length
+    );
+    console.log(
+        "Available cuisine categories:",
+        [...new Set(
+            restaurantKnowledgeBase.flatMap(item => item.cuisine)
+        )]
+    );
+    console.log(
+        "Active production rules:",
+        knowledgeRules.length
+    );
+    console.log(
+        "Current customer knowledge:",
+        customerKnowledge
+    );
+    console.log("=================================");
+}
+
+/* =====================================================
+   PART 4 — FORM HANDLING & INITIALIZATION
+===================================================== */
+
+/* 19. CUSTOMER PREFERENCE FORM */
+
+function setupPreferenceForm() {
+
+    const preferenceForm =
+        document.getElementById("preferenceForm");
+
+    if (!preferenceForm) {
+        console.error("Preference form not found.");
+        return;
+    }
+
+    preferenceForm.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const locationInput =
+            document.getElementById("locationInput");
+
+        const budgetSelect =
+            document.getElementById("budgetSelect");
+
+        const mealSelect =
+            document.getElementById("mealSelect");
+
+        const selectedCuisine =
+            document.querySelector("[data-cuisine].active");
+
+        const selectedDietary =
+            Array.from(
+                document.querySelectorAll(
+                    'input[name="diet"]:checked'
+                )
+            ).map(input => input.value);
+
+        const selectedPriority =
+            document.querySelector(
+                'input[name="priority"]:checked'
+            );
+
+        customerKnowledge.location =
+            locationInput?.value.trim() || "Erode";
+
+        customerKnowledge.preferredCuisine =
+            selectedCuisine?.dataset.cuisine || "Any";
+
+        customerKnowledge.dietaryRequirements =
+            selectedDietary;
+
+        customerKnowledge.budget =
+            budgetSelect?.value || "Any";
+
+        customerKnowledge.meal =
+            mealSelect?.value || "Any";
+
+        customerKnowledge.priority =
+            selectedPriority?.value || "taste";
+
+        refreshRecommendations();
+
+        showNotification(
+            "Your restaurant recommendations are updated!"
+        );
+
+    });
+
+}
+
+
+/* 20. CUISINE BUTTON INTERACTIONS */
+
+function setupCuisineSelection() {
+
+    const cuisineButtons =
+        document.querySelectorAll("[data-cuisine]");
+
+    cuisineButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            cuisineButtons.forEach(item => {
+                item.classList.remove("active", "selected");
+            });
+
+            button.classList.add("active", "selected");
+
+            selectedCuisine = button.dataset.cuisine;
+
+            console.log(
+                "Selected cuisine:",
+                selectedCuisine
+            );
+
+        });
+
+    });
+
+}
+
+
+/* 21. INITIAL CUSTOMER PREFERENCES */
+
+function initializeDefaultPreferences() {
+
+    const defaultCuisine = document.querySelector(
+        '[data-cuisine="South Indian"]'
+    );
+
+    if (defaultCuisine) {
+        defaultCuisine.classList.add("active");
+    }
+
+}
+
+
+/* 22. INITIALIZE FOODWISE AI */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("Initializing FoodWise AI...");
+
+    initializeDefaultPreferences();
+
+    setupCuisineSelection();
+
+    setupPreferenceForm();
+
+    displayKnowledgeStatistics();
+
+    const recommendations = refreshRecommendations();
+
+    console.log(
+        "Initial recommendations generated:",
+        recommendations.length
+    );
+
+    console.log(
+        "FoodWise AI successfully initialized!"
+    );
+
 });
