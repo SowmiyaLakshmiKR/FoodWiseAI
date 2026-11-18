@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="FoodWise AI - An intelligent, knowledge-based restaurant recommendation system.">
+
+    <title>FoodWise AI | Intelligent Food Discovery</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <a href="#" class="brand">
+            <span class="brand-icon">F</span>
+            <span>FoodWise<span class="brand-highlight"> AI</span></span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#discover" class="nav-link">Discover</a>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <a href="#knowledge" class="nav-link">Knowledge Base</a>
+        </nav>
+
+        <div class="nav-right">
+            <span class="system-status">
+                <span class="status-indicator"></span>
+                AI Engine Active
+            </span>
+
+            <button class="profile-button" aria-label="User profile">
+                P
+            </button>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO SECTION ================= -->
+
+        <section class="hero-section" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <span>✦</span>
+                    INTELLIGENT FOOD DISCOVERY
+                </div>
+
+                <h1>
+                    Discover food<br>
+                    that feels <span>right.</span>
+                </h1>
+
+                <p class="hero-description">
+                    More than restaurant recommendations.
+
+                    FoodWise AI understands your preferences,
+                    dietary needs and food habits to discover
+                    restaurants that truly match you.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#discover" class="primary-button">
+                        Explore Restaurants
+                        <span>↗</span>
+                    </a>
+
+                    <a href="#how-it-works" class="secondary-button">
+                        Discover how it works
+                    </a>
+
+                </div>
+
+                <div class="hero-highlights">
+
+                    <div class="highlight-item">
+                        <strong>01</strong>
+                        <span>Understand preferences</span>
+                    </div>
+
+                    <div class="highlight-item">
+                        <strong>02</strong>
+                        <span>Reason intelligently</span>
+                    </div>
+
+                    <div class="highlight-item">
+                        <strong>03</strong>
+                        <span>Recommend better</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Decorative food illustration will be CSS-generated -->
+
+            <div class="hero-visual">
+
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+
+                <div class="food-illustration">
+
+                    <div class="food-glow"></div>
+
+                    <div class="food-bowl">
+                        <div class="food-bowl-inner">
+                            <span class="food-item tomato"></span>
+                            <span class="food-item leaf-one"></span>
+                            <span class="food-item leaf-two"></span>
+                            <span class="food-item noodle-one"></span>
+                            <span class="food-item noodle-two"></span>
+                        </div>
+                    </div>
+
+                    <span class="floating-symbol symbol-one">✳</span>
+                    <span class="floating-symbol symbol-two">✦</span>
+
+                </div>
+
+                <div class="floating-card floating-card-top">
+                    <span class="floating-card-icon">✧</span>
+                    <div>
+                        <small>Preference match</small>
+                        <strong>94% compatible</strong>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-card-bottom">
+                    <span class="floating-card-icon">◉</span>
+                    <div>
+                        <small>Smart recommendations</small>
+                        <strong>Made around you</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DISCOVERY SECTION ================= -->
+
+        <section class="discovery-section" id="discover">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">PERSONALIZED DISCOVERY</span>
+
+                    <h2>
+                        What are you craving today?
+                    </h2>
+
+                    <p>
+                        Customize your preferences.
+                        Let our knowledge engine do the thinking.
+                    </p>
+                </div>
+
+                <span class="section-number">01 / 04</span>
+
+            </div>
+
+
+            <div class="discovery-layout">
+
+                <!-- USER PREFERENCES -->
+
+                <div class="preference-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <span class="panel-icon">⌘</span>
+                            <h3>Your Preferences</h3>
+                        </div>
+
+                        <span class="panel-caption">Personalize your search</span>
+
+                    </div>
+
+
+                    <form id="preferenceForm">
+
+                        <!-- LOCATION -->
+
+                        <div class="form-group">
+
+                            <label for="locationInput">
+                                Your Location
+                            </label>
+
+                            <div class="input-container">
+                                <span>⌖</span>
+
+                                <input
+                                    type="text"
+                                    id="locationInput"
+                                    name="location"
+                                    placeholder="Enter your city or area"
+                                    value="Erode"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <!-- CUISINE -->
+
+                        <div class="form-group">
+
+                            <label>
+                                Preferred Cuisine
+                            </label>
+
+                            <p class="field-description">
+                                Choose the food you enjoy.
+                            </p>
+
+                            <div class="choice-container" id="cuisineChoices">
+
+                                <button type="button" class="choice-chip selected" data-cuisine="South Indian">
+                                    South Indian
+                                </button>
+
+                                <button type="button" class="choice-chip" data-cuisine="North Indian">
+                                    North Indian
+                                </button>
+
+                                <button type="button" class="choice-chip" data-cuisine="Chinese">
+                                    Chinese
+                                </button>
+
+                                <button type="button" class="choice-chip" data-cuisine="Italian">
+                                    Italian
+                                </button>
+
+                                <button type="button" class="choice-chip" data-cuisine="Continental">
+                                    Continental
+                                </button>
+
+                                <button type="button" class="choice-chip" data-cuisine="Healthy">
+                                    Healthy
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DIETARY REQUIREMENTS -->
+
+                        <div class="form-group">
+
+                            <label>
+                                Dietary Requirements
+                            </label>
+
+                            <p class="field-description">
+                                Select all that apply.
+                            </p>
+
+                            <div class="dietary-grid">
+
+                                <label class="dietary-option">
+                                    <input type="checkbox" name="diet" value="Vegetarian" checked>
+                                    <span>🌿 Vegetarian</span>
+                                </label>
+
+                                <label class="dietary-option">
+                                    <input type="checkbox" name="diet" value="Vegan">
+                                    <span>🥑 Vegan</span>
+                                </label>
+
+                                <label class="dietary-option">
+                                    <input type="checkbox" name="diet" value="Jain">
+                                    <span>🪷 Jain</span>
+                                </label>
+
+                                <label class="dietary-option">
+                                    <input type="checkbox" name="diet" value="Gluten-free">
+                                    <span>🌾 Gluten-free</span>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BUDGET AND MEAL -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="budgetSelect">
+                                    Budget per Person
+                                </label>
+
+                                <select id="budgetSelect" name="budget">
+
+                                    <option value="any">Any Budget</option>
+                                    <option value="150">Under ₹150</option>
+                                    <option value="250" selected>Under ₹250</option>
+                                    <option value="400">Under ₹400</option>
+                                    <option value="600">Under ₹600</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="mealSelect">
+                                    Meal Preference
+                                </label>
+
+                                <select id="mealSelect" name="meal">
+
+                                    <option value="Any">Any Meal</option>
+                                    <option value="Breakfast">Breakfast</option>
+                                    <option value="Lunch">Lunch</option>
+                                    <option value="Dinner">Dinner</option>
+                                    <option value="Snacks">Snacks</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRIORITY -->
+
+                        <div class="form-group">
+
+                            <label>
+                                What matters most?
+                            </label>
+
+                            <div class="priority-options">
+
+                                <label>
+                                    <input type="radio" name="priority" value="taste" checked>
+                                    <span>♥ Taste</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="priority" value="distance">
+                                    <span>⌖ Nearby</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="priority" value="budget">
+                                    <span>₹ Budget</span>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <button type="submit" class="recommend-button">
+                            Find My Restaurants
+                            <span>↗</span>
+                        </button>
+
+                    </form>
+
+                    <p class="privacy-note">
+                        ✦ Your preferences power personalized recommendations.
+                    </p>
+
+                </div>
+
+
+                <!-- RECOMMENDATION RESULTS -->
+
+                <div class="recommendation-panel">
+
+                    <div class="results-heading">
+
+                        <div>
+                            <span class="section-label">CURATED FOR YOU</span>
+
+                            <h3 id="resultHeading">
+                                Your Restaurant Matches
+                            </h3>
+                        </div>
+
+                        <span class="result-count" id="resultCount">
+                            03 MATCHES
+                        </span>
+
+                    </div>
+
+
+                    <div class="restaurant-results" id="resultsGrid">
+
+                        <!-- Restaurant cards will be generated using JavaScript -->
+
+                        <div class="results-placeholder">
+
+                            <div class="placeholder-icon">✧</div>
+
+                            <h4>Your recommendations await</h4>
+
+                            <p>
+                                Choose your preferences and let
+                                FoodWise AI discover your next
+                                favourite restaurant.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reasoning-summary">
+
+                        <span class="reasoning-icon">✦</span>
+
+                        <div>
+                            <h4>Every recommendation has a reason.</h4>
+
+                            <p>
+                                Our inference engine evaluates your
+                                preferences and explains why each
+                                restaurant is recommended.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section" id="how-it-works">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">THE INTELLIGENCE BEHIND FOODWISE</span>
+
+                    <h2>
+                        How does FoodWise think?
+                    </h2>
+
+                    <p>
+                        Knowledge representation transforms user
+                        preferences into meaningful decisions.
+                    </p>
+                </div>
+
+                <span class="section-number">02 / 04</span>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <article class="process-card">
+
+                    <span class="process-number">01</span>
+
+                    <div class="process-icon">◎</div>
+
+                    <h3>Knowledge Acquisition</h3>
+
+                    <p>
+                        Collect customer preferences, dietary
+                        requirements, location and previous orders.
+                    </p>
+
+                    <span class="process-tag">INPUT FACTS</span>
+
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">02</span>
+
+                    <div class="process-icon">◇</div>
+
+                    <h3>Ontology Representation</h3>
+
+                    <p>
+                        Represent customers, restaurants, cuisines
+                        and dietary requirements as connected concepts.
+                    </p>
+
+                    <span class="process-tag">UNIT 3</span>
+
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">03</span>
+
+                    <div class="process-icon">⚙</div>
+
+                    <h3>Knowledge Reasoning</h3>
+
+                    <p>
+                        Apply IF–THEN production rules and evaluate
+                        relationships using an inference engine.
+                    </p>
+
+                    <span class="process-tag">UNIT 4</span>
+
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">04</span>
+
+                    <div class="process-icon">✧</div>
+
+                    <h3>Intelligent Learning</h3>
+
+                    <p>
+                        Refine customer preference weights using
+                        previous orders and feedback.
+                    </p>
+
+                    <span class="process-tag">UNIT 5</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KNOWLEDGE REPRESENTATION ================= -->
+
+        <section class="knowledge-section" id="knowledge">
+
+            <div class="knowledge-intro">
+
+                <span class="section-label">
+                    KNOWLEDGE REPRESENTATION
+                </span>
+
+                <h2>
+                    Connecting concepts.<br>
+                    Creating intelligence.
+                </h2>
+
+                <p>
+                    FoodWise AI uses ontology-based knowledge
+                    representation to understand how different
+                    food-related entities are connected.
+                </p>
+
+                <div class="ontology-legend">
+
+                    <span>
+                        <i class="legend-customer"></i>
+                        Customer
+                    </span>
+
+                    <span>
+                        <i class="legend-restaurant"></i>
+                        Restaurant
+                    </span>
+
+                    <span>
+                        <i class="legend-concept"></i>
+                        Concepts
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="ontology-panel">
+
+                <div class="ontology-header">
+
+                    <h3>Food Domain Ontology</h3>
+
+                    <span>KNOWLEDGE GRAPH</span>
+
+                </div>
+
+
+                <div class="ontology-graph">
+
+                    <div class="ontology-node customer-node">
+                        Customer
+                    </div>
+
+                    <div class="ontology-node preference-node">
+                        Preference
+                    </div>
+
+                    <div class="ontology-node cuisine-node">
+                        Cuisine
+                    </div>
+
+                    <div class="ontology-node dietary-node">
+                        Dietary Requirement
+                    </div>
+
+                    <div class="ontology-node restaurant-node">
+                        Restaurant
+                    </div>
+
+                    <div class="ontology-node location-node">
+                        Location
+                    </div>
+
+                    <div class="ontology-node menu-node">
+                        Menu Item
+                    </div>
+
+                    <div class="ontology-node order-node">
+                        Previous Order
+                    </div>
+
+                    <span class="ontology-relation relation-one">
+                        hasPreference
+                    </span>
+
+                    <span class="ontology-relation relation-two">
+                        prefersCuisine
+                    </span>
+
+                    <span class="ontology-relation relation-three">
+                        requiresDiet
+                    </span>
+
+                    <span class="ontology-relation relation-four">
+                        servesCuisine
+                    </span>
+
+                </div>
+
+
+                <div class="ontology-footer">
+                    <span>ILLUSTRATIVE ONTOLOGY STRUCTURE</span>
+                    <span>● Connected knowledge entities</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RULE ENGINE ================= -->
+
+        <section class="rules-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">RULE-BASED INFERENCE ENGINE</span>
+
+                    <h2>
+                        Decisions backed by knowledge.
+                    </h2>
+
+                    <p>
+                        IF–THEN production rules guide
+                        the recommendation process.
+                    </p>
+                </div>
+
+                <span class="section-number">03 / 04</span>
+
+            </div>
+
+
+            <div class="rules-grid">
+
+                <article class="rule-card">
+
+                    <span class="rule-label">RULE 01 · DIETARY MATCH</span>
+
+                    <div class="rule-content">
+                        <p><strong>IF</strong> customer requires Vegetarian</p>
+                        <p><strong>AND</strong> restaurant offers Vegetarian food</p>
+                        <p><strong>THEN</strong> consider it a candidate</p>
+                    </div>
+
+                    <p class="rule-description">
+                        Filters restaurants according to
+                        customer dietary requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="rule-card">
+
+                    <span class="rule-label">RULE 02 · CUISINE MATCH</span>
+
+                    <div class="rule-content">
+                        <p><strong>IF</strong> preferred cuisine matches</p>
+                        <p><strong>AND</strong> restaurant serves that cuisine</p>
+                        <p><strong>THEN</strong> increase match score</p>
+                    </div>
+
+                    <p class="rule-description">
+                        Uses preference matching to rank
+                        suitable restaurants.
+                    </p>
+
+                </article>
+
+
+                <article class="rule-card">
+
+                    <span class="rule-label">RULE 03 · PREFERENCE LEARNING</span>
+
+                    <div class="rule-content">
+                        <p><strong>IF</strong> customer likes a recommendation</p>
+                        <p><strong>THEN</strong> update preference weight</p>
+                        <p><strong>AND</strong> refine future ranking</p>
+                    </div>
+
+                    <p class="rule-description">
+                        Learns from customer feedback
+                        to improve future suggestions.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SYSTEM INFORMATION ================= -->
+
+        <section class="system-section">
+
+            <div class="system-card">
+
+                <div>
+                    <span class="section-label">BUILT ON KNOWLEDGE ENGINEERING</span>
+
+                    <h2>
+                        Not just recommendations.<br>
+                        Intelligent reasoning.
+                    </h2>
+
+                    <p>
+                        Combining knowledge representation,
+                        ontology development, rule-based reasoning
+                        and preference learning.
+                    </p>
+                </div>
+
+                <div class="system-decoration">
+                    <span>KNOWLEDGE</span>
+                    <span class="system-symbol">✳</span>
+                    <span>INTELLIGENCE</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <a href="#" class="brand">
+            <span class="brand-icon">F</span>
+            <span>FoodWise<span class="brand-highlight"> AI</span></span>
+        </a>
+
+        <p>
+            Knowledge-Based Restaurant Recommendation System
+        </p>
+
+        <span class="footer-course">
+            22ITE61 · KNOWLEDGE ENGINEERING
+        </span>
+
+        <span class="copyright">
+            © 2026 FoodWise AI. Academic Project.
+        </span>
+
+    </footer>
+
+
+    <!-- NOTIFICATION -->
+
+    <div class="toast-message" id="toastMessage" role="status" aria-live="polite"></div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
