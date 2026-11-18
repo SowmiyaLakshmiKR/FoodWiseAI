@@ -1600,7 +1600,61 @@ a {
         min-height: 250px;
         gap: 10px;
     }
+  /* ===== FOODWISE AI – TYPOGRAPHY UPGRADE ===== */
 
+body {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.15;
+}
+
+section h2 {
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    line-height: 1.25;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+button,
+input,
+select,
+label {
+    font-size: 15px;
+}
+
+.restaurant-card h3 {
+    font-size: 21px;
+}
+
+.restaurant-card p {
+    font-size: 15px;
+}
+
+.caption,
+small {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 1.9rem;
+    }
+}
     .ontology-node {
         font-size: 9px;
         padding: 9px;
